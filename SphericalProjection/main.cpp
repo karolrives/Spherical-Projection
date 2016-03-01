@@ -34,38 +34,25 @@ void getSphericalMap(Mat image,Mat &map_x,Mat &map_y,float focal_length){
     float height = image.rows;
     float xc = 0.5f * width;
     float yc = 0.5f * height;
-    float radius = 1;
     for(int j=0; j < image.rows ; j++){
         for(int i=0; i < image.cols ; i++){
-            
-//            double _x = s * atan2f(i/M_PI, focal_length/M_PI);
-//            double _y = s * atan2f(j/M_PI, sqrt(i*i + focal_length*focal_length)/M_PI);
-//            
-//            double u = s * tan((_x/s)/M_PI);
-//            double v = focal_length * tan((_y/s)/M_PI) * (1/cos((_x/s)/M_PI));
-//            cout << "X: " << _x << ",Y: " << _y << endl;
-//            cout << "U: " << u << ",V: " << v << endl << endl;
             cout << "(i: " << i << ",j: " << j << ")" << endl;
-            float tetha =  ((j - xc )  / focal_length);
-            float phi = ((i - yc)   / focal_length);
-            //cout << "Theta: " << tetha << " Phi: " << phi << endl;
+            float tetha =  ((i - xc )  / focal_length);
+            float phi = ((j - yc)   / focal_length);
+            cout << "Theta: " << tetha << " Phi: " << phi << endl;
             cout << "Theta(deg): " << tetha*180/M_PI << " Phi(deg): " << phi *180/M_PI << endl;
-            float x = 1 * radius * sin( tetha ) * cos ( phi );
-            float z = 1 * radius * cos( tetha ) * cos ( phi );
-            float y = -1 * radius * sin ( phi  );
+            float x = -1*sin( tetha ) * cos ( phi );
+            float z = cos( tetha ) * cos ( phi );
+            float y = sin ( phi  );
             cout << "X: " << x << ",Y: " << y << ",Z: " << z << endl;
             float r = sqrt( x*x + y*y + z*z);
             cout << "Radius: " << r <<endl;
-//            float u = atan2(tetha, phi)/M_PI_2;
-//            while (u>=1.0) u -= 1.0;
-//            while (u<0) u += 1.0;
-//            phi /= sqrt(tetha*tetha+phi*phi);
-//            float v = asin(phi)/M_PI;
+            cout << "WidthxHeight:" << width << "x" << height <<endl;
+            cout << "Xc,Yc:" << xc << "x" << yc <<endl <<endl;
             float u = ( x / z ) * focal_length + xc ;
-            float v = ( y / z ) * focal_length + yc ;
+            float v = (y / z ) * focal_length + yc ;
             map_x.at<float>(j,i) = u;
             map_y.at<float>(j,i) = v;
-            cout << "U: " << u << ",V: " << v << endl << endl;
             
         }
     }
