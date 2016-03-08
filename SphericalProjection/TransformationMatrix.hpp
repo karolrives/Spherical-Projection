@@ -71,6 +71,8 @@ public:
     void setRotMatOnY();
     void setRotMatOnZ();
     void setTranslationMatrix();
+    void setDistancePoints(double x, double y, double z);
+
     //void setAffineMatrix(float scale);
 
     //cv::Mat set2dTo3dMatrix();
