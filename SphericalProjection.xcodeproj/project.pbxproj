@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AEDCB9561C826B500081C3DA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AEDCB9551C826B500081C3DA /* main.cpp */; };
-		F932747B1C8E1D1000E9DA0B /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F932747A1C8E1D1000E9DA0B /* TransformationMatrix.cpp */; };
+		F932747F1C8E5EE600E9DA0B /* TransformationMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F932747E1C8E5EE600E9DA0B /* TransformationMatrix.cpp */; };
+		F93274811C8E5EEC00E9DA0B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F93274801C8E5EEC00E9DA0B /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +25,9 @@
 
 /* Begin PBXFileReference section */
 		AEDCB9521C826B500081C3DA /* SphericalProjection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SphericalProjection; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEDCB9551C826B500081C3DA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		F93274791C8E1CFD00E9DA0B /* TransformationMatrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = TransformationMatrix.hpp; path = ../../test/test/TransformationMatrix.hpp; sourceTree = "<group>"; };
-		F932747A1C8E1D1000E9DA0B /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TransformationMatrix.cpp; path = ../../test/test/TransformationMatrix.cpp; sourceTree = "<group>"; };
+		F932747E1C8E5EE600E9DA0B /* TransformationMatrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransformationMatrix.cpp; sourceTree = "<group>"; };
+		F93274801C8E5EEC00E9DA0B /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F93275161C8E61CF00E9DA0B /* TransformationMatrix.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TransformationMatrix.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +60,9 @@
 		AEDCB9541C826B500081C3DA /* SphericalProjection */ = {
 			isa = PBXGroup;
 			children = (
-				F932747A1C8E1D1000E9DA0B /* TransformationMatrix.cpp */,
-				F93274791C8E1CFD00E9DA0B /* TransformationMatrix.hpp */,
-				AEDCB9551C826B500081C3DA /* main.cpp */,
+				F93275161C8E61CF00E9DA0B /* TransformationMatrix.hpp */,
+				F93274801C8E5EEC00E9DA0B /* main.cpp */,
+				F932747E1C8E5EE600E9DA0B /* TransformationMatrix.cpp */,
 			);
 			path = SphericalProjection;
 			sourceTree = "<group>";
@@ -123,8 +123,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEDCB9561C826B500081C3DA /* main.cpp in Sources */,
-				F932747B1C8E1D1000E9DA0B /* TransformationMatrix.cpp in Sources */,
+				F932747F1C8E5EE600E9DA0B /* TransformationMatrix.cpp in Sources */,
+				F93274811C8E5EEC00E9DA0B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
