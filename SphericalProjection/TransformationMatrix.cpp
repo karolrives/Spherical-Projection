@@ -164,6 +164,15 @@ void Transformation::setRotMatOnZ(){
           0,          0,           0, 1);
 }
 
+void Transformation::setDistancePoints(double x, double y, double z){
+    
+    dx = x;
+    dy = y;
+    dz = z;
+    setTranslationMatrix();
+    
+}
+
 void Transformation::setTranslationMatrix(){
     
     T = (cv::Mat_<double>(4, 4) <<
